@@ -4,7 +4,7 @@
     font-weight: 400;
     src: url("fonts/ptsans-400.woff2") format("woff2");
     font-display: swap;
-  }
+}
   
   @font-face {
     font-family: "PT Sans";
@@ -12,20 +12,77 @@
     font-weight: 700;
     src: url("fonts/ptsans-700.woff2") format("woff2");
     font-display: swap;
-  }
+}
   
 body {
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     line-height: 21px;
-    background-color: #E5E5E5;
+    background-color: #F2F2F2;
     color: #000000;
-  }
- 
+}
+
+h2 {
+    color: #000000;
+    background-color:#FFFFFF;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+}
+    
+h3 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;  
+}
+
+.button {
+    font-weight: 700;
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #83B3D3; 
+}
+
+.navigation-button,
+.hotel-card-button {
+    font-size: 16px;
+    line-height: 21px;
+    background-color: #756257;
+} 
+
+.search-hotels-button {
+    font-size: 20px;
+    line-height: 36px;
+    background-color: #756257;
+}
+
+.newsletter-button,
+.pagination-load-more {
+    font-size: 20px;
+    line-height: 26px;
+    }
+
+.button-featured,
+.button-submit {
+    font-size: 16px;
+    line-height: 21px; 
+} 
+
+.button-featured-current {
+    background-color: #7DB54F; 
+}
+
+.sorting-button {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
 .main-page-header {
     color: #000000;
-    background:#FFFFFF;
-  }
+    background-color:#FFFFFF;
+}
 
 .navigation-link {
     font-size: 20px;
@@ -35,7 +92,177 @@ body {
     color: #000000;
     background-color: #FFFFFF;
     text-decoration: none;
-  }
+}
 
+.main-index,
+.pagination-load-more,
+.newsletter-inner {
+    text-align: center;
+}
+
+.welcome-image {
+    background-color: #6eb8e9;
+}
+
+.filter {
+    background-color: #8d4311;
+}
+
+.background-1,
+.background-5 {
+    background-color:#83B3D3;
+    color: #FFFFFF;
+}
+
+.background-3 {
+    background-color:#FFFFFF;
+    color: #333333;
+}
+
+.background-2,
+.background-4,
+.background-6,
+.background-8 {
+    background-color: rgba(131, 179, 211, 0.12);
+    color: #000000;
+}
+
+.background-7 {
+    background-color:rgba(131, 179, 211, 0.2);
+    color: #000000;
+}
+
+.newsletter,
+h2.accent {
+    background-color: #6eb8e9; 
+    color: #FFFFFF; 
+}
+
+p.accent-black {
+    color: #333333;
+    background-color:#FFFFFF;
+}
+
+p.accent-white {
+    color: #FFFFFF;
+}
+
+.hotel-search,
+.reasons {
+    background-color:#FFFFFF;
+}
+
+.field {
+    background-color: #F2F2F2;
+    color: #000000;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.page-footer {
+    background-color: #FFFFFF;
+}
+
+.contacts-phone {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 400;
+    color: #000000; 
+    text-decoration: none;   
+}
+
+.main-inner {
+    background-color: #FFFFFF;
+}
+
+.catalog-hotels,
+.inner-header {
+    color: #FFFFFF; 
+}
+
+.inner-header-title {
+    font-size: 60px;
+    line-height: 78px;
+    font-weight: 700;
+}
   
+.breadcrumbs-link {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 400;
+    color: inherit;
+}
+
+.catalog-filter-title {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;  
+}
+
+.catalog-filter-list {
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 400;
+}
+ 
+.results {
+    color: #000000;
+    font-size: 30px;
+    line-height: 39px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.select-control,
+.note,
+.hotels-on-page,
+.select-quantity {
+    color: #333333; 
+    line-height: 23px;
+    font-weight: 400; 
+}
+
+.hotel-card-title {
+    color: #000000;
+    font-size: 24px;
+    line-height: 31px;
+    font-weight: 700;
+}
+
+.hotel-card-link {
+    text-decoration: none;
+}
+
+.top-list {
+    color: #333333; 
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+}
+ 
+.pagination-link {
+    color: #FFFFFF;
+    background-color: #83B3D3;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
   
+.pagination-current {
+    color: #000000;
+    background-color: #F2F2F2;
+} 
+
+h1.visually-hidden,
+h2.visually-hidden,
+label.visually-hidden,
+.button-quantity-submit {
+    visibility:hidden;
+}
+
+
