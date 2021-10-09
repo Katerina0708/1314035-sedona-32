@@ -13,8 +13,17 @@
     src: url("../fonts/ptsans-700.woff2") format("woff2");
     font-display: swap;
 }
+
+html {
+    height: 100%;
+}
+  
   
 body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     line-height: 21px;
@@ -84,6 +93,24 @@ h3 {
     background-color:#FFFFFF;
 }
 
+.navigation {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 138px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navigation-list {
+    width: 410px;
+    margin: 0;
+    padding: 0;
+}
+
 .navigation-link {
     font-size: 20px;
     line-height: 26px;
@@ -94,18 +121,40 @@ h3 {
     text-decoration: none;
 }
 
+.navigation-user {
+    max-width: 280px;
+    margin-left: auto;
+}
+
+.main-container {
+    flex-grow: 1;
+}
+
 .main-index,
 .pagination-load-more,
 .newsletter-inner {
     text-align: center;
 }
 
+.page-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
 .welcome-image {
     background-color: #6eb8e9;
 }
 
-.filter {
-    background-color: #8d4311;
+.advantages-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.advantages-item {
+    width: 400px;
 }
 
 .background-1,
@@ -194,6 +243,10 @@ p.accent-white {
     color: inherit;
 }
 
+.filter {
+    background-color: #8d4311;
+}
+
 .catalog-filter-title {
     font-size: 20px;
     line-height: 26px;
@@ -265,4 +318,20 @@ label.visually-hidden,
     visibility:hidden;
 }
 
+.page-footer-container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
 
+.footer-social {
+  width: 110px;
+  margin-left: 72px;
+  margin-right: 58px;
+}
+
+.contacts-phone {
+    width: 720px;
+    text-align: center;  
+    margin-right: 53px;
+}
