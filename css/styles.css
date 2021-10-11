@@ -37,8 +37,11 @@ h2 {
     font-size: 30px;
     line-height: 36px;
     font-weight: 700;
+    margin: 0;
 }
-    
+
+
+   
 h3 {
     font-size: 24px;
     line-height: 28px;
@@ -127,8 +130,9 @@ h3 {
 }
 
 .main-container {
+    display: flex;
     flex-grow: 1;
-}
+  }
 
 .main-index,
 .pagination-load-more,
@@ -143,6 +147,9 @@ h3 {
 
 .welcome-image {
     background-color: #6eb8e9;
+    display: block;
+    margin: 0;
+   
 }
 
 .advantages-list {
@@ -190,6 +197,7 @@ h2.accent {
 p.accent-black {
     color: #333333;
     background-color:#FFFFFF;
+    margin: 0;
 }
 
 p.accent-white {
@@ -200,6 +208,7 @@ p.accent-white {
 .reasons {
     background-color:#FFFFFF;
 }
+
 
 .field {
     background-color: #F2F2F2;
