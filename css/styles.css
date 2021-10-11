@@ -74,7 +74,7 @@ h3 {
 .pagination-load-more {
     font-size: 20px;
     line-height: 26px;
-    }
+}
 
 .button-featured,
 .button-submit {
@@ -100,6 +100,9 @@ h3 {
     display: flex;
     width: 1200px;
     margin: 0 auto;
+
+    outline: 5px solid rgba(255, 99, 78, 0.5);
+    outline-offset: -5px;
 }
 
 .logo {
@@ -132,7 +135,7 @@ h3 {
 .main-container {
     display: flex;
     flex-grow: 1;
-  }
+}
 
 .main-index,
 .pagination-load-more,
@@ -243,6 +246,7 @@ p.accent-white {
     font-size: 60px;
     line-height: 78px;
     font-weight: 700;
+    margin: 0;
 }
   
 .breadcrumbs-link {
@@ -254,6 +258,10 @@ p.accent-white {
 
 .filter {
     background-color: #8d4311;
+    width: 1200px;
+
+    outline: 5px solid rgba(255, 99, 78, 0.5);
+    outline-offset: -5px;
 }
 
 .catalog-filter-title {
@@ -267,7 +275,17 @@ p.accent-white {
     line-height: 23px;
     font-weight: 400;
 }
- 
+
+
+.row-results {
+width: 1057px;
+padding-left: 71px;
+padding-right: 72px;
+outline: 5px solid rgba(255, 99, 78, 0.5);
+    outline-offset: -5px;
+}
+
+
 .results {
     color: #000000;
     font-size: 30px;
@@ -283,6 +301,18 @@ p.accent-white {
     color: #333333; 
     line-height: 23px;
     font-weight: 400; 
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    width: 1056px;
+    margin: 0;
+    padding-left: 72px;
+    padding-right: 72px; 
+
+    outline: 5px solid rgba(255, 99, 78, 0.5);
+    outline-offset: -5px;
 }
 
 .hotel-card-title {
@@ -303,7 +333,22 @@ p.accent-white {
     text-align: center;
     font-weight: 400;
 }
- 
+
+.pagination {
+    margin: 0;
+}
+
+.row-pagination {
+   
+    width: 1056px;
+    margin: 0;
+    padding-left: 72px;
+    padding-right: 72px; 
+
+    outline: 5px solid rgba(255, 99, 78, 0.5);
+    outline-offset: -5px;
+}
+
 .pagination-link {
     color: #FFFFFF;
     background-color: #83B3D3;
@@ -320,6 +365,15 @@ p.accent-white {
     background-color: #F2F2F2;
 } 
 
+.newsletter-inner {
+    width: 800px;
+    padding-left: 200px;
+    padding-right: 200px; 
+
+    outline: 5px solid rgba(255, 99, 78, 0.5);
+    outline-offset: -5px;
+}
+
 h1.visually-hidden,
 h2.visually-hidden,
 label.visually-hidden,
@@ -331,12 +385,15 @@ label.visually-hidden,
     display: flex;
     width: 1200px;
     margin: 0 auto;
+
+    outline: 5px solid rgba(255, 99, 78, 0.5);
+    outline-offset: -5px;
 }
 
 .footer-social {
-  width: 110px;
-  margin-left: 72px;
-  margin-right: 58px;
+    width: 110px;
+    margin-left: 72px;
+    margin-right: 58px;
 }
 
 .contacts-phone {
