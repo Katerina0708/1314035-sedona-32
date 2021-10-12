@@ -31,6 +31,17 @@ body {
     color: #000000;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 h2 {
     color: #000000;
     background-color:#FFFFFF;
@@ -45,7 +56,8 @@ h2 {
 h3 {
     font-size: 24px;
     line-height: 28px;
-    font-weight: 700;  
+    font-weight: 700; 
+    margin: 0; 
 }
 
 .button {
@@ -107,17 +119,22 @@ h3 {
 
 .logo {
     width: 138px;
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
 }
 
 .navigation-list {
+    display: flex;
+    flex-wrap: wrap; 
     width: 410px;
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 
 .navigation-link {
+    display: block;
+    padding: 19px 16px 20px 16px;
     font-size: 20px;
     line-height: 26px;
     font-weight: 700;
@@ -130,6 +147,11 @@ h3 {
 .navigation-user {
     max-width: 280px;
     margin-left: auto;
+}
+
+.navigation-user .navigation-link {
+    min-width: 18px;
+    min-height: 18px;
 }
 
 .main-container {
@@ -155,6 +177,12 @@ h3 {
    
 }
 
+.about-sedona {
+    padding-top: 63px; 
+    padding-bottom: 23px;
+
+}
+
 .advantages-list {
     margin: 0;
     padding: 0;
@@ -171,6 +199,7 @@ h3 {
 .background-5 {
     background-color:#83B3D3;
     color: #FFFFFF;
+    width: 100%;
 }
 
 .background-3 {
@@ -184,11 +213,13 @@ h3 {
 .background-8 {
     background-color: rgba(131, 179, 211, 0.12);
     color: #000000;
+    width: 400px;
 }
 
 .background-7 {
     background-color:rgba(131, 179, 211, 0.2);
     color: #000000;
+    width: 400px;
 }
 
 .newsletter,
@@ -201,6 +232,7 @@ p.accent-black {
     color: #333333;
     background-color:#FFFFFF;
     margin: 0;
+    padding-bottom: 79px;
 }
 
 p.accent-white {
@@ -210,7 +242,14 @@ p.accent-white {
 .hotel-search,
 .reasons {
     background-color:#FFFFFF;
+
+    outline: 5px solid rgba(255, 99, 78, 0.5);
+    outline-offset: -5px;
 }
+
+
+ 
+   
 
 
 .field {
@@ -372,13 +411,6 @@ outline: 5px solid rgba(255, 99, 78, 0.5);
 
     outline: 5px solid rgba(255, 99, 78, 0.5);
     outline-offset: -5px;
-}
-
-h1.visually-hidden,
-h2.visually-hidden,
-label.visually-hidden,
-.button-quantity-submit {
-    visibility:hidden;
 }
 
 .page-footer-container {
