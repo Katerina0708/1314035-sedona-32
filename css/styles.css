@@ -613,7 +613,7 @@ form.catalog-filter {
 .note {
     display: block;
     padding: 0;
-    margin-bottom: 31px;
+    margin-bottom: 28px;
 }
 
 .hotel-card-image {
@@ -633,6 +633,7 @@ form.catalog-filter {
 
 a.hotel-card-link {
     text-decoration: none;
+    min-width: 215px;
 }
 
 .top-list {
