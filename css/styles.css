@@ -102,6 +102,7 @@ h3 {
     margin-right: 8px;
     padding: 9px 0  10px 0;
     box-sizing: border-box;
+    
 }
 
 .search-hotels-button {
@@ -587,7 +588,7 @@ form.catalog-filter {
 
 .hotel-card {
     display: flex;
-    padding-top: 31px;
+    padding-top: 28px;
     padding-bottom: 30px;
 
     outline: 5px solid rgba(255, 99, 78, 0.5);
@@ -596,26 +597,27 @@ form.catalog-filter {
 
 .info-hotel {
     display: flex;
-    flex-direction: column;    
+    flex-wrap: wrap;
+    width: 319px;
     margin-right: 361px;
 }
 
-.type-price {
-    display: flex; 
-    margin: 0;
+.column-1 {
+    margin: 0;  
 }
 
-.two-buttons {
-display: flex;
+.column-2 {
+    margin: 0;  
 }
 
-.note-type {
-    margin-right: 78px;
+.note {
+    display: block;
+    padding: 0;
     margin-bottom: 31px;
 }
 
 .hotel-card-image {
-    display: block;
+    display: block; 
     padding-right: 37px;
 }
 
@@ -624,22 +626,23 @@ display: flex;
     font-size: 24px;
     line-height: 31px;
     font-weight: 700;
-    padding-bottom: 1px;
-    margin: 0; 
+    padding: 0;
+    margin-bottom: 1px; 
     text-transform: none;
 }   
 
-.hotel-card-link {
+a.hotel-card-link {
     text-decoration: none;
 }
 
 .top-list {
-   align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
     color: #333333; 
     font-size: 16px;
     text-transform: uppercase;
-   
-    font-weight: 400;
+    font-weight: 400; 
 }
 
 .pagination {
