@@ -31,6 +31,12 @@ body {
     color: #000000;
 }
 
+.central-container {
+   width: 1200px;
+   margin: 0 auto;
+   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -178,19 +184,31 @@ h3 {
     background-color:#FFFFFF;
 }
 
+.main-page-header {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+
 .navigation {
     display: flex;
     width: 1200px;
     margin: 0 auto;
     padding: 0 72px 0 71px;
-    box-sizing: border-box;
-    
-    outline: 5px solid rgba(255, 99, 78, 0.5);
-    outline-offset: -5px;
+    box-sizing: border-box;  
 }
 
-.navigation-link-logo {
+.logo-sedona {
+    position: relative; 
+    width: 138px;  
+    height: 65px;
     padding: 0 170px 0 50px;
+}
+
+.logo {
+    position: absolute;  
+    width: 138px;  
+    height: 70.05px;
 }
 
 .navigation-list {
@@ -215,8 +233,7 @@ h3 {
     color: #000000;
     background-color: #FFFFFF;
     text-decoration: none;
-}
-    
+}  
 
 .navigation-user {
     display: flex;
@@ -243,7 +260,7 @@ h3 {
     font-size: 10px;
     line-height: 13px;
     color: #FFFFFF;
-    text-align: center;   
+    text-align: center; 
 }
 
 .navigation-icon {
@@ -277,7 +294,7 @@ h3 {
 
 .navigation-link-current::before {
     position: absolute;
-    bottom: -18px;
+    bottom: -16px;
     left: 10px;
     right: 10px;
     height: 0px;
@@ -531,9 +548,6 @@ p.accent-white {
 .hotel-search,
 .reasons {
     background-color:#FFFFFF;
-
-    outline: 5px solid rgba(255, 99, 78, 0.5);
-    outline-offset: -5px;
 }
 
 .hotel-search {
@@ -610,13 +624,56 @@ h2.accent {
     padding: 0;
     list-style-type: none;
 }
-   
+ 
+.breadcrumbs-item {
+    position: relative;
+    margin-right: 25px;
+    list-style-type: none;  
+}
+  
+.breadcrumbs-item::after {
+    position: absolute;
+    top: 9px;
+    right: -15px;
+    width: 5.11px;
+    height: 7.95px;
+    background-image: url("../img/catalog/stroke-right.svg");
+    background-repeat: no-repeat;
+    content: "";   
+}
+  
+.breadcrumbs-item:last-child::after {
+    content: none;
+}
+
 .breadcrumbs-link {
     font-size: 16px;
     line-height: 21px;
     font-weight: 400;
-    margin-right: 26px;
     color: inherit;
+}
+
+.breadcrumbs-link:hover {
+    color:#FFFFFF;
+    opacity: 60%;
+}
+
+.breadcrumbs-link:focus {
+    outline: 3px solid #83B3D3;
+    border-radius: 4px;
+}
+
+.breadcrumbs-link:active {
+    color: #FFFFFF;
+    opacity: 0.3; 
+    border: none;  
+}
+
+.breadcrumbs-icon {
+    width: 28px;
+    height: 27px;
+    padding: 6.3px 8px 9px 8px;
+    box-sizing: border-box;
 }
 
 form.catalog-filter {
@@ -630,10 +687,7 @@ form.catalog-filter {
     background-color: #8d4311;
     width: 1200px;
     padding-left: 71px;
-    box-sizing: border-box;
-      
-    outline: 5px solid rgba(255, 99, 78, 0.5);
-    outline-offset: -5px;
+    box-sizing: border-box;   
 }
 
 .catalog-filter-title {
@@ -659,7 +713,7 @@ form.catalog-filter {
     line-height: 23px;
     font-weight: 400;
     color: #FFFFFF; 
-    background-color: #8d4311;
+    background-color: transparent;
     border: hidden;
 }
 
@@ -729,17 +783,12 @@ form.catalog-filter {
 
 .cards {
     padding-left: 72px;
-    padding-right: 72px;
-    outline: 5px solid rgba(255, 99, 78, 0.5);
-    outline-offset: -5px;
+    padding-right: 72px; 
 }
 
 .hotel-card {
     padding-top: 31px;
-    padding-bottom: 30px;
-
-    outline: 5px solid rgba(255, 99, 78, 0.5);
-    outline-offset: -5px;
+    padding-bottom: 30px;   
 }
 
 .card-container {
@@ -748,8 +797,6 @@ form.catalog-filter {
     grid-template-rows: 120px;
     width: 100%;
     height: 100%;
-    outline: 5px solid rgba(255, 99, 78, 0.5);
-    outline-offset: -5px;
 }
 
 .note-type {
@@ -823,8 +870,6 @@ a.hotel-card-link {
     width: 1200px;
     margin: 0;
     box-sizing: border-box;
-    outline: 5px solid rgba(255, 99, 78, 0.5);
-    outline-offset: -5px;
 }
 
 .pagination-item:not(:last-child) {
@@ -897,9 +942,6 @@ h2.accent-inner {
     padding: 40px 72px 30px 72px;
     box-sizing: border-box;
     background-color: #FFFFFF;
-
-    outline: 5px solid rgba(255, 99, 78, 0.5);
-    outline-offset: -5px;
 }
 
 .footer-social {
