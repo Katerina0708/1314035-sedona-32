@@ -107,9 +107,9 @@ h3 {
   background-color: #615048;  
 }
 
-.navigation-button:focus,
-.search-hotels-button:focus,
-.hotel-card-button:focus {
+.navigation-button:focus-visible,
+.search-hotels-button:focus-visible,
+.hotel-card-button:focus-visible {
   background-color: #615048;  
   outline: 3px solid #83B3D3;
 }
@@ -129,6 +129,7 @@ h3 {
   padding-top: 1px;
   padding-bottom: 1px; 
   border-radius: 0px 10px 10px 0px;
+  outline-offset: -3px;
 }
 
 .newsletter-button:hover,
@@ -718,15 +719,16 @@ h2.accent {
 
 .inner-header {
   padding-top: 35px;
-  margin-bottom: 45px;
+  margin-bottom: 38px;
 }
 
 .inner-header-title {
   font-size: 60px;
-  line-height: 78px;
+  line-height: 68px;
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 5px; 
+  padding: 0;
 }
 
 .breadcrumbs {
@@ -740,7 +742,7 @@ h2.accent {
   position: relative;
   margin-right: 25px;
   list-style-type: none;  
-}
+} 
   
 .breadcrumbs-item::after {
   position: absolute;
@@ -758,11 +760,35 @@ h2.accent {
 }
 
 .breadcrumbs-link {
-    font-size: 16px;
-    line-height: 21px;
-    font-weight: 400;
-    color: inherit;
+  display: block;
+  display: flex;
+  align-items: center;
+  /*padding: 6.3px 8px 9px 8px;*/ 
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  color: inherit;
 }
+
+/*.breadcrumbs-icon {
+padding-left: 2px;
+}*/
+
+.breadcrumbs-link-icon {
+  
+  width: 28px;
+  height: 27px;
+  padding: 6.3px 8px 9px 8px;
+  box-sizing: border-box;  
+}
+
+/*.breadcrumbs-link-current {
+  width: 73px;
+  height: 21px;
+  padding: 6.3px 8px 9px 8px;  
+}*/
 
 .breadcrumbs-link:hover {
     color:#FFFFFF;
@@ -780,13 +806,6 @@ h2.accent {
     border: none;  
 }
 
-.breadcrumbs-icon {
-    width: 28px;
-    height: 27px;
-    padding: 6.3px 8px 9px 8px;
-    box-sizing: border-box;
-}
-
 form.catalog-filter {
     display: flex;
     flex-wrap: wrap;
@@ -794,7 +813,6 @@ form.catalog-filter {
 }
 
 .filter {
-    height: 408px;
     background-image: url("../img/catalog/catalog-background.jpg");
     background-color: #8d4311;
     padding-left: 71px;
@@ -805,7 +823,7 @@ form.catalog-filter {
     font-size: 20px;
     line-height: 26px;
     font-weight: 700; 
-    margin-bottom: 34px; 
+    margin-bottom: 30px; 
 }
 
 .catalog-filter-list {
@@ -914,14 +932,18 @@ form.catalog-filter {
 
 .left-block:focus-within,
 .right-block:focus-within {
-    outline: 2px solid #FFFFFF;
-    box-shadow: inset 0px 0px 0px 3px #81B3D2;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0px 0px 0px 3px #81B3D2,
+  inset 0 0 0 3px #81B3D2;
+  
 }
 
 .left-block:active,
 .right-block:active {
     background-color: #756257;
     border: 2px solid #FFFFFF;
+    outline: none;
+    box-shadow: none;
 }
 
 .catalog-filter-input-left { 
@@ -934,7 +956,7 @@ form.catalog-filter {
     color: #FFFFFF;
     line-height: 23px;
     background-color: transparent;
-    border: 0;
+    border: none;
     appearance: textfield;
 }
 
@@ -948,10 +970,14 @@ form.catalog-filter {
     color: #FFFFFF;
     line-height: 23px;
     background-color: transparent;
-    border: 0;
+    border: none;
     appearance: textfield;
 }
- 
+
+.catalog-filter-input-left:focus-visible,
+.catalog-filter-input-right:focus-visible {
+    outline: none;
+}
 
   .catalog-filter-input-left::-webkit-outer-spin-button,
   .catalog-filter-input-left::-webkit-inner-spin-button,
@@ -1503,6 +1529,60 @@ p.about-text {
     margin: 0;
 }
 
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 62px 70px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+}
+
+.modal-search {
+  width: 575px;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding:0;
+  top: 54px;
+  right: 70px;
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  background-color: #F2F2F2;
+  border: none;
+  background-image: url("../img/close-modal.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+} 
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 32px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.search-form .field-group {
+  margin: 0;
+  /*margin-bottom: 16px;*/
+}
 
 
 .popover {
@@ -1520,15 +1600,15 @@ p.about-text {
     display: block;
 }
 
-.popover-close-button {
+.popover-content::before {
   position: absolute;
-  top: 0px;
+  top: -9px;
   left: 190px;
   width: 20px;
   height: 9px;
   background-image: url("../img/stroke-popover.svg");
   background-repeat: no-repeat;
-  background-position: 9px center;
+  background-position: center;
   background-color: #FFFFFF;
   box-shadow: 0px -1px 0px #E4E4E4;
   content: "";   
@@ -1538,6 +1618,7 @@ p.about-text {
   height: 100%;
   padding-top: 25px;
   border: 1px solid #E6E6E6;
+  border-bottom: none;
   border-radius: 20px 20px 0 0; 
   background-color: #FFFFFF;
   box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15); 
@@ -1546,6 +1627,7 @@ p.about-text {
 .feature-item {
   display: flex;   
   padding-left: 25px; 
+  margin-bottom: 25px;
 }
 
 .feature-items-list {
@@ -1571,12 +1653,32 @@ p.about-text {
     line-height: 21px;
     font-weight: 400;
     color:  #333333;
-
 }
 
 .hotel-image-popover {
   margin-right: 17px;
-  margin-bottom: 25px;
+}
+
+.popover-link {
+display: flex;
+padding: 10px;
+margin: -10px;
+text-decoration: none;
+width: fit-content;
+}
+
+.popover-link:hover {
+  opacity: 0.6;
+}
+
+.popover-link:focus-within {
+  outline: 3px solid #83B3D3;
+  border-radius: 10px;
+}
+
+.popover-link:active {
+  opacity: 0.3;
+  outline: none;
 }
 
 .cart-button {
@@ -1585,6 +1687,23 @@ p.about-text {
    padding: 0; 
    padding-top: 9px;
    background-color: transparent;
+   opacity: 0.2;
+}
+
+.cart-button:hover {
+  opacity: 1;
+}
+
+.cart-button:focus {
+  width: 25px;
+  height: 25px;
+  outline: 2px solid #68A2CA;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.cart-button:hover {
+  opacity: 1;
 }
 
 .column-popover {
@@ -1601,4 +1720,19 @@ p.about-text {
     border-radius: 0px 0px 20px 20px;
 }
 
+.all-features-button:hover {
+  background-color: #615048;
+}
+
+.all-features-button:focus {
+  background-color: #615048;
+  outline: 3px solid #83B3D3;
+  outline-offset: -3px;
+}
+
+.all-features-button:active {
+  background-color: #615048;
+  color: rgba(255, 255, 255, 0.3);
+  outline: none;
+}
 
