@@ -88,16 +88,14 @@
                     </button>
                   </li>
                   <li class="feature-item">
-                    <div class="hotel-info-popover">
-                      <a class="popover-link" href="#">
-                        <img class="hotel-image-popover" src="img/hotel-3-small.jpg" width="48" height="48"
-                          alt="Фотография апартаментов Villas at Poco Diablo">
-                      </a>
+                    <a class="popover-link" href="#">
+                      <img class="hotel-image-popover" src="img/hotel-3-small.jpg" width="48" height="48"
+                        alt="Фотография апартаментов Villas at Poco Diablo">
                       <div class="column-popover">
                         <p class="feature-item-title">Villas at Poco Diablo</p>
                         <p class="type-of-apartmens">Апартаменты</p>
                       </div>
-                    </div>
+                    </a>
                     <button type="button" class="cart-button button">
                       <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -119,10 +117,9 @@
                       <span class="visually-hidden">Удалить из корзины</span>
                     </button>
                   </li>
+                </ul>
               </div>
               <button type="button" class="all-features-button button">Все избранные</button>
-
-
             </div>
           </li>
           <li class="navigation-item">
@@ -270,39 +267,69 @@
     </footer>
   </div>
 
-  <div class="modal-container">
+  <div class="modal-container modal-container-close">
     <div class="modal modal-search">
       <button class="modal-close-button">
+        <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 1.2L11.8 0L6.5 5.3L1.2 0L0 1.2L5.3 6.5L0 11.8L1.2 13L6.5 7.7L11.8 13L13 11.8L7.7 6.5L13 1.2Z" />
+        </svg>
         <span class="visually-hidden">Закрыть</span>
       </button>
       <section class="modal-content">
         <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
         <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
-          <p class="field-group">
-            <label class="date" for="arrival-date">Дата заезда:</label>
-            <input class="search-form-field field" type="text" id="arrival-date" name="arrival-date"
-              placeholder="27 апреля 2020">
+          <label class="arrival-label label-modal" for="arrival-date">Дата заезда:</label>
+          <input class="arrival-field modal-field" type="text" id="arrival-date" name="arrival-date"
+            value="27 апреля 2020" placeholder="Укажите дату">
+          <p class="error-message">Мы не можем отправить вас в прошлое.</p>
+          <label class="depature-label label-modal" for="depature-date">Дата выезда:</label>
+          <input class="depature-field modal-field" type="text" id="depature-date" name="depature-date"
+            value="1 сентября 2021" placeholder="Укажите дату">
+          <p class="success-message">На эти даты есть свободные номера. Пока есть.</p>
+          <label class="adult-label label-modal" for="adult">Взрослые:</label>
+          <div class="wrapper-adult wrapper-modal">
+            <button class="button-counter minus-button button">
+              <span class="visually-hidden">Отнять один</span>
+            </button>
+            <input class="adult-counter counter-modal" type="number" id="adult" name="adult" value="2">
+            <button class="button-counter plus-button button">
+              <span class="visually-hidden">Добавить один</span>
+            </button>
+          </div>
+          <span class="form-label-icon">
+            <label class="children-label label-modal" for="children">Дети:</label>
+            <button class="info" type="button">
+              <svg width="1" height="9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#a)" fill="#fff">
+                  <path d="M0 9h1V3H0v6ZM1 0H0v1h1V0Z" />
+                </g>
+                <defs>
+                  <clipPath id="a">
+                    <path fill="#fff" d="M0 0h1v9H0z" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+            </button>
+          </span>
+          <p class="modal-popover">
+            Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются
+            бесплатно.
           </p>
-          <p>Мы не можем отправить вас в прошлое.</p>
-          <p class="field-group">
-            <label class="date" for="depature-date">Дата выезда:</label>
-            <input class="search-form-field field" type="text" id="depature-date" name="depature-date"
-              placeholder="1 сентября 2021">
-          </p>
-          <p>На эти даты есть свободные номера. Пока есть.</p>
-          <p class="field-group adult-info">
-            <label class="adult-label" for="adult">Взрослые:</label>
-            <input class="adult-counter" type="number" id="adult" name="adult" value="2">
-          </p>
-          <p class="field-group children-info">
-            <label class="children-label" for="children">Дети:</label>
-            <input class="children-counter" type="number" id="children" name="children" value="1">
-          </p>
-
-          <button class="button button-find" type="submit">Найти</button>
+          <div class="wrapper-children wrapper-modal">
+            <button class="button-counter minus-button button">
+              <span class="visually-hidden">Отнять один</span>
+            </button>
+            <input class="children-counter counter-modal" type="number" id="children" name="children" value="1">
+            <button class="button-counter plus-button button">
+              <span class="visually-hidden">Добавить один</span>
+            </button>
+          </div>
         </form>
-      </section>
 
+        <button class="button button-find" type="submit">Найти</button>
+
+      </section>
     </div>
   </div>
 </body>
