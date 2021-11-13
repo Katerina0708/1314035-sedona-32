@@ -19,10 +19,11 @@ html {
 }
 
 body {
-  margin: 0;
   display: flex;
   flex-direction: column;
+  min-width: 1280px;
   min-height: 100%;
+  margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -48,6 +49,9 @@ body {
 }
 
 h2:not(h2.accent) {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 32px;
   color: #000000;
   background-color: #ffffff;
   font-size: 30px;
@@ -87,6 +91,7 @@ h3 {
 .navigation-button {
   width: 160px;
   height: 37px;
+  margin-left: 10px;
   background-color: #756257;
 }
 
@@ -317,8 +322,8 @@ h3 {
 .navigation-link {
   position: relative;
   display: block;
-  padding: 6px 12px;
-  margin-right: 21px;
+  padding: 0;
+  margin-right: 33px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -345,7 +350,7 @@ h3 {
 
 .navigation-link-feature::after {
   position: absolute;
-  left: 21.5px;
+  left: 30px;
   width: 19px;
   height: 19px;
   border-radius: 50%;
@@ -362,9 +367,16 @@ h3 {
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
   margin: auto;
   fill: #000000;
+}
+
+.search-icon {
+  left: 40px;
+}
+
+.feature-icon {
+  left: 13px;
 }
 
 .navigation-link:hover,
@@ -388,11 +400,11 @@ h3 {
 
 .navigation-link-current::before {
   position: absolute;
-  bottom: -16px;
-  left: 10px;
-  right: 10px;
+  bottom: -20px;
+  left: 0;
+  right: 0;
   height: 0;
-  border: 2px solid #756257;
+  border: 1px solid #756257;
   background-color: #756257;
   content: "";
 }
@@ -522,12 +534,12 @@ h3 {
 
 .number {
   display: block;
-  padding-bottom: 26px;
+  padding-bottom: 32px;
 }
 
 .advantages-title {
   padding-top: 98px;
-  margin-bottom: 25px;
+  margin-bottom: 29px;
   width: 180px;
   margin-left: auto;
   margin-right: auto;
@@ -599,16 +611,13 @@ p.accent-black {
 }
 
 .advantages p.accent-black {
-  padding-bottom: 0;
   font-size: 22px;
   line-height: 36px;
-  font-weight: 400;
 }
 
 .hotel-search p.accent-black,
 h2.interest,
 h2.accent {
-  width: 720px;
   margin: 0 auto;
 }
 
@@ -621,6 +630,7 @@ h2.accent {
 
 .interest {
   padding-bottom: 15px;
+  margin-bottom: 31px;
 }
 
 p.accent-white {
