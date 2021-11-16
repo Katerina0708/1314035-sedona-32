@@ -89,7 +89,7 @@ h3 {
 
 .navigation-button {
   width: 160px;
-  height: 37px;
+  min-height: 37px;
   margin-left: 10px;
   background-color: #756257;
 }
@@ -165,7 +165,7 @@ h3 {
   width: 160px;
   height: 48px;
   margin-top: 60px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .button-submit:hover {
@@ -298,10 +298,14 @@ h3 {
 }
 
 .logo-sedona {
-  position: relative;
   width: 138px;
   height: 65px;
   padding-right: 65px;
+}
+
+.navigation-link-logo:focus,
+.navigation-link-logo:focus-visible {
+  outline: none;
 }
 
 .navigation-list {
@@ -537,7 +541,7 @@ h3 {
 
 .number {
   display: block;
-  padding-bottom: 32px;
+  padding-bottom: 28px;
 }
 
 .advantages-title {
@@ -590,7 +594,7 @@ h3 {
 
 .no-number {
   padding-top: 184px;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   width: 180px;
   margin-left: auto;
   margin-right: auto;
@@ -628,7 +632,7 @@ p.accent-black {
 }
 
 .interest {
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 p.accent-white {
@@ -637,8 +641,6 @@ p.accent-white {
   margin-bottom: 47px;
   font-size: 22px;
   line-height: 26px;
-  font-weight: 400;
-  text-align: center;
   width: 500px;
 }
 
@@ -654,12 +656,10 @@ p.accent-white {
 
 .field {
   background-color: #f2f2f2;
-  color: #000000;
   padding-left: 22px;
   padding-right: 19px;
   font-size: 18px;
   line-height: 26px;
-  font-weight: 400;
   width: 600px;
   height: 60px;
   border: none;
@@ -694,7 +694,6 @@ p.accent-white {
 .newsletter {
   background-image: url("../img/background-newsletter.jpg");
   background-color: #6eb8e9;
-  color: #ffffff;
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -716,11 +715,11 @@ p.newsletter-email {
 h2.accent {
   color: #ffffff;
   background-color: transparent;
+  text-transform: uppercase;
+  margin-bottom: 31px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 29px;
 }
 
 .main-inner {
@@ -734,16 +733,14 @@ h2.accent {
 
 .inner-header {
   padding-top: 35px;
-  margin-bottom: 38px;
+  margin-bottom: 45px;
 }
 
 .inner-header-title {
   font-size: 60px;
   line-height: 68px;
-  font-weight: 700;
   margin-top: 0;
   margin-bottom: 5px;
-  padding: 0;
 }
 
 .breadcrumbs {
@@ -755,14 +752,14 @@ h2.accent {
 
 .breadcrumbs-item {
   position: relative;
-  margin-right: 25px;
+  margin-right: 40px;
   list-style-type: none;
 }
 
 .breadcrumbs-item::after {
   position: absolute;
-  top: 9px;
-  right: -15px;
+  top: 6px;
+  right: -30px;
   width: 5.11px;
   height: 7.95px;
   background-image: url("../img/catalog/stroke-right.svg");
@@ -786,7 +783,9 @@ h2.accent {
 }
 
 .breadcrumbs-link-icon {
-
+  position: absolute;
+  top: -3px;
+  left: -6px;
   width: 28px;
   height: 27px;
   padding: 6.3px 8px 9px 8px;
@@ -813,21 +812,20 @@ h2.accent {
 form.catalog-filter {
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 83px;
+  padding-bottom: 79px;
 }
 
 .filter {
   background-image: url("../img/catalog/catalog-background.jpg");
   background-color: #8d4311;
   padding-left: 71px;
-  box-sizing: border-box;
 }
 
-.catalog-filter-title:not(.title-price) {
+.catalog-filter-title {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
-  margin-bottom: 31px;
+  margin-bottom: 30px;
 }
 
 .title-price {
@@ -835,9 +833,7 @@ form.catalog-filter {
 }
 
 .catalog-filter-list {
-  font-size: 18px;
   line-height: 23px;
-  font-weight: 400;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -849,7 +845,6 @@ form.catalog-filter {
 
 .control {
   position: relative;
-  display: block;
   padding-left: 39px;
 }
 
@@ -915,7 +910,6 @@ form.catalog-filter {
 
 .left-block {
   display: flex;
-  padding: 0;
   margin: 0;
   width: 143px;
   height: 48px;
@@ -927,7 +921,6 @@ form.catalog-filter {
 
 .right-block {
   display: flex;
-  padding: 0;
   margin: 0;
   width: 144px;
   height: 48px;
@@ -959,13 +952,10 @@ form.catalog-filter {
 
 .catalog-filter-input-left {
   width: 83px;
-  padding-top: 14px;
-  padding-bottom: 11px;
+  padding-top: 11px;
   padding-left: 19px;
   font: inherit;
-  text-align: left;
   color: #ffffff;
-  line-height: 23px;
   background-color: transparent;
   border: none;
   appearance: textfield;
@@ -973,13 +963,10 @@ form.catalog-filter {
 
 .catalog-filter-input-right {
   width: 83px;
-  padding-top: 14px;
-  padding-bottom: 11px;
+  padding-top: 11px;
   padding-left: 17px;
   font: inherit;
-  text-align: left;
   color: #ffffff;
-  line-height: 23px;
   background-color: transparent;
   border: none;
   appearance: textfield;
@@ -1003,7 +990,7 @@ form.catalog-filter {
 .range-scale {
   position: relative;
   height: 4px;
-  margin-top: 32px;
+  margin-top: 28px;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -1055,7 +1042,6 @@ form.catalog-filter {
 .submit-reset {
   display: flex;
   flex-direction: column;
-  align-self: center;
 }
 
 .reset {
@@ -1064,8 +1050,6 @@ form.catalog-filter {
   height: 32px;
   font-family: inherit;
   font-size: 18px;
-  line-height: 23px;
-  font-weight: 400;
   color: #ffffff;
   background-color: transparent;
   border: hidden;
@@ -1091,7 +1075,7 @@ form.catalog-filter {
 .row-results {
   display: flex;
   padding-left: 71px;
-  padding-right: 72px;
+  padding-right: 64px;
   padding-top: 44px;
   padding-bottom: 42px;
 }
@@ -1109,6 +1093,10 @@ form.catalog-filter {
   border: none;
 }
 
+.card-grid-toggle-current {
+  outline: 2px solid #000000;
+}
+
 .card-grid-toggle:hover,
 .card-grid-toggle:focus,
 .card-grid-toggle:focus-visible {
@@ -1120,7 +1108,6 @@ form.catalog-filter {
 }
 
 .results {
-  color: #000000;
   font-size: 30px;
   line-height: 39px;
   font-weight: 700;
@@ -1132,7 +1119,6 @@ form.catalog-filter {
   margin-right: auto;
   width: 287px;
   height: 48px;
-  box-sizing: border-box;
 }
 
 .select-control {
@@ -1173,7 +1159,6 @@ form.catalog-filter {
 
 .infrastructure {
   margin-right: 63px;
-  padding: 0;
 }
 
 .housing {
@@ -1182,9 +1167,7 @@ form.catalog-filter {
 }
 
 .price {
-  width: 287px;
   margin-right: 81px;
-  padding: 0;
 }
 
 .cards {
@@ -1254,11 +1237,8 @@ form.catalog-filter {
 .hotel-card-title {
   grid-column: 1 / 5;
   grid-row: 1 / 2;
-  color: #000000;
-  font-size: 24px;
-  line-height: 31px;
-  font-weight: 700;
   padding: 0;
+  margin-top: -3px;
   margin-bottom: 1px;
   text-transform: none;
 }
@@ -1292,7 +1272,6 @@ form.catalog-filter {
 }
 
 a.hotel-card-link-image {
-  text-decoration: none;
   width: 180px;
   outline: none;
 }
@@ -1371,7 +1350,6 @@ a.hotel-card-link-image {
 .pagination-container {
   display: flex;
   padding: 31px 72px 89px 72px;
-  box-sizing: border-box;
 }
 
 .pagination-item:not(:last-child) {
@@ -1381,8 +1359,8 @@ a.hotel-card-link-image {
 .pagination-link {
   display: block;
   box-sizing: border-box;
-  width: 55px;
-  height: 55px;
+  min-width: 55px;
+  min-height: 55px;
   padding-top: 14px;
   color: #ffffff;
   background-color: #83b3d3;
@@ -1412,6 +1390,7 @@ a.hotel-card-link-image {
 .select-quantity {
   width: 160px;
   height: 48px;
+  margin-top: 3px;
   padding: 13px 100px 12px 17px;
   outline: 2px solid #e6e6e6;
   border: none;
@@ -1439,16 +1418,15 @@ a.hotel-card-link-image {
 }
 
 h2.accent-inner {
-  padding-bottom: 15px;
+  padding-bottom: 29px;
 }
 
 .newsletter-inner p.accent-black {
   margin: 0 auto;
-  padding-bottom: 26px;
+  padding-bottom: 45px;
   width: 500px;
   font-size: 22px;
   line-height: 26px;
-  font-weight: 400;
 }
 
 .page-footer-container {
@@ -1565,7 +1543,7 @@ p.about-text {
 .modal {
   position: relative;
   margin: auto;
-  padding: 62px 70px;
+  padding: 62px 70px 70px 70px;
   background-color: #ffffff;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
@@ -1649,6 +1627,7 @@ p.about-text {
   background-color: #f2f2f2;
   color: #000000;
   padding-left: 19px;
+  letter-spacing: -1px;
   border: none;
   border-radius: 4px;
   box-sizing: border-box;
@@ -1678,7 +1657,7 @@ p.about-text {
   position: absolute;
   width: 15px;
   height: 15px;
-  left: 533px;
+  left: 542px;
   background-image: url("../img/calendar-modal.svg");
   content: "";
 }
@@ -1700,10 +1679,11 @@ p.about-text {
 .success-message {
   grid-column: 2/5;
   grid-row: 2/3;
+  margin: 0;
   color: #ff5757;
   font-size: 16px;
   line-height: 29px;
-  align-self: flex-end;
+  align-self: flex-start;
 }
 
 .error-message {
@@ -1735,6 +1715,7 @@ p.about-text {
 
 .counter-modal {
   width: 31px;
+  font-size: inherit;
   background-color: #f2f2f2;
   border: none;
   text-align: center;
@@ -1817,14 +1798,15 @@ p.about-text {
   position: relative;
   grid-column: 3/4;
   grid-row: 5/6;
+  padding-top: 5px;
   padding-left: 56px;
   padding-right: 16px;
 }
 
 .info {
   position: absolute;
-  top: 10px;
-  left: 110px;
+  top: 13px;
+  left: 112px;
   width: 25px;
   height: 25px;
   padding: 0;
@@ -1884,9 +1866,9 @@ p.about-text {
 .modal-popover {
   position: absolute;
   width: 256px;
-  left: 283px;
-  top: 215px;
-  padding: 15px 18px 18px 22px;
+  left: 285px;
+  top: 217px;
+  padding: 20px 18px 25px 22px;
   background-color: #333333;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
@@ -1912,7 +1894,7 @@ p.about-text {
 .popover {
   position: absolute;
   top: 49px;
-  right: -160px;
+  right: -169px;
   z-index: 1;
   box-sizing: border-box;
   width: 400px;
@@ -1939,7 +1921,7 @@ p.about-text {
 
 .popover-content {
   height: 100%;
-  padding: 25px;
+  padding: 22px 15px 26px 25px;
   border: 1px solid #e6e6e6;
   border-bottom: none;
   border-radius: 20px 20px 0 0;
@@ -1949,7 +1931,10 @@ p.about-text {
 
 .feature-item {
   display: flex;
-  margin-bottom: 25px;
+}
+
+.feature-item:not(:last-child) {
+  margin-bottom: 26px;
 }
 
 .feature-items-list {
@@ -2002,10 +1987,11 @@ p.about-text {
 }
 
 .cart-button {
-  width: 28px;
-  height: 28px;
-  padding-top: 7px;
+  width: 36px;
+  height: 36px;
+  padding: 10px;
   margin-left: auto;
+  box-sizing: border-box;
   background-color: transparent;
   opacity: 0.2;
 }
@@ -2016,8 +2002,8 @@ p.about-text {
 
 .cart-button:focus,
 .cart-button:focus-visible {
-  outline: 2px solid #68a2ca;
-  border-radius: 4px;
+  outline: 3px solid #68a2ca;
+  border-radius: 10px;
   opacity: 1;
 }
 
