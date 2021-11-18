@@ -917,9 +917,9 @@ form.catalog-filter {
   outline: 3px solid #83b3d3;
 }
 
-.control-input:disabled {
+.control-input:disabled + .control-mark {
   outline: none;
-  background-color: rgb(67, 73, 88);
+  background-color: rgb(114, 115, 119);
 }
 
 .range-wrapper-inputs {
@@ -1181,20 +1181,17 @@ form.catalog-filter {
 .infrastructure {
   max-width: 150px;
   margin-right: 63px;
-  overflow: auto;
 }
 
 .housing {
   max-width: 150px;
   margin-right: 170px;
   padding: 0;
-  overflow: auto;
 }
 
 .price {
   max-width: 300px;
   margin-right: 81px;
-  overflow: auto;
 }
 
 .cards {
