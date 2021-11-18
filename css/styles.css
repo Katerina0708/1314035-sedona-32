@@ -48,25 +48,6 @@ body {
   overflow: hidden;
 }
 
-h2 {
-  padding: 0;
-  margin: 0;
-  color: #000000;
-  background-color: #ffffff;
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-h3 {
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  margin: 0;
-  text-transform: uppercase;
-}
-
 .button {
   display: inline-block;
   font-family: inherit;
@@ -458,6 +439,21 @@ h3 {
   padding: 63px 240px 79px 240px;
 }
 
+.about-sedona,
+.interest,
+.accent,
+.modal-title,
+.accent-inner {
+  padding: 0;
+  margin: 0;
+  color: #000000;
+  background-color: #ffffff;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .about-sedona {
   padding-bottom: 32px;
 }
@@ -537,6 +533,16 @@ h3 {
 .number {
   display: block;
   padding-bottom: 28px;
+}
+
+.advantages-title,
+.no-number,
+.hotel-card-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
 }
 
 .advantages-title {
@@ -726,12 +732,8 @@ h2.accent {
   margin-bottom: 29px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: 700;
   color: #ffffff;
   background-color: transparent;
-  text-transform: uppercase;
 }
 
 .main-inner {
